@@ -1,0 +1,156 @@
+<!-- res/layout/activity_payment.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp">
+
+    <ImageView
+        android:id="@+id/buttonDashboard"
+        android:layout_width="@dimen/_33sdp"
+        android:layout_height="@dimen/_33sdp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_minus2sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:src="@drawable/kembali" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifikasi"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="#646464"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_minus30sdp"
+        android:layout_marginStart="@dimen/_100sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/notification_icon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_notif" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/notification_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengumuman"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notification_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jadwal Wawancara 5 PM" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notification_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selengkapnya..."
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/notification_icon2"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_notif" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/notification_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengumuman"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notification_description2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jadwal Wawancara 5 PM" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notification_action2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selengkapnya..."
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/notification_icon3"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_notif" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/notification_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengumuman"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notification_description3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jadwal Wawancara 5 PM" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notification_action3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selengkapnya..."
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

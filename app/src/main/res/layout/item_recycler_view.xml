@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_profile_placeholder"
+        android:scaleType="centerCrop"
+        android:background="@drawable/ic_profile_placeholder" />
+
+    <!-- Name and Position -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Guru"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13sdp"/>
+
+        <TextView
+            android:id="@+id/textPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posisi"
+            android:textColor="#666666"
+            android:textSize="@dimen/_10sdp"/>
+    </LinearLayout>
+
+    <!-- Button 'Selengkapnya' -->
+    <Button
+        android:id="@+id/buttonSelengkapnya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selengkapnya"
+        android:textSize="@dimen/_8sdp"
+        android:backgroundTint="#229799"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="@dimen/_50sdp"
+            app:cornerRadius="@dimen/_16sdp"/>
+</LinearLayout>

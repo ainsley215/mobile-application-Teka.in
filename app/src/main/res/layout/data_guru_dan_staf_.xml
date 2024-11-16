@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16sdp"
+    android:background="#ffffff">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Guru Dan Staff"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="#646464"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_2sdp"/>
+    
+    <!-- tombol kembali -->
+    <ImageView
+        android:id="@+id/buttonDashboard"
+        android:layout_width="@dimen/_33sdp"
+        android:layout_height="@dimen/_33sdp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="@dimen/_minus2sdp"
+        android:layout_marginEnd="28dp"
+        android:layout_toStartOf="@+id/headerTitle"
+        android:src="@drawable/kembali" />
+
+    <!-- Search Bar -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="@dimen/_29sdp"
+        android:layout_below="@id/headerTitle"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/search_view_background"
+        android:queryHint="Cari guru" />
+
+    <!-- RecyclerView for the List of Teachers/Staff -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterButtonsContainer"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="#FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/filterButtonsContainer"
+        android:layout_width="@dimen/_154sdp"
+        android:layout_height="@dimen/_29sdp"
+        android:orientation="horizontal"
+        android:layout_below="@id/searchView"
+        android:layout_marginBottom="@dimen/_16sdp">
+
+        <Button
+            android:id="@+id/filterAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semua" />
+
+        <Button
+            android:id="@+id/filterNewest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Terbaru" />
+    </LinearLayout>
+
+</RelativeLayout>
