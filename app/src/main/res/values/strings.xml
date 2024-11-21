@@ -60,4 +60,16 @@
         <item>Tahun 2024</item>
         <item>Tahun 2023</item>
     </string-array>
+
+    <string-array name="gender_options">
+        <item>All</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="class_options">
+        <item>All</item>
+        <item>Class A</item>
+        <item>Class B</item>
+        <item>Class C</item>
+    </string-array>
 </resources>

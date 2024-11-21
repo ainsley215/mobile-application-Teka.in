@@ -20,6 +20,11 @@ public class SiswaAdapter extends RecyclerView.Adapter<SiswaAdapter.ViewHolder> 
     private List<Siswa> siswaList;
     private List<Siswa> siswaListFull; // List penuh untuk pencarian
 
+    public void updateList(List<Siswa> newList) {
+        this.siswaList = newList;
+        notifyDataSetChanged();
+    }
+
     public SiswaAdapter(List<Siswa> siswaList) {
         this.siswaList = siswaList;
         siswaListFull = new ArrayList<>(siswaList); // Salin data siswa ke siswaListFull

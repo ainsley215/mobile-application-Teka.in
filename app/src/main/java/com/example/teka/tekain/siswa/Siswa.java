@@ -5,6 +5,7 @@ public class Siswa {
     private String nisn;
     private String gender;
     private String studentClass;
+    private String timestamp;
 
     public Siswa(String name, String nisn, String gender, String studentClass) {
         this.name = name;
@@ -28,4 +29,7 @@ public class Siswa {
     public String getStudentClass() {
         return studentClass;
     }
+
+    public String getTimestamp() {
+        return timestamp; }
 }

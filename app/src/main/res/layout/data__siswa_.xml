@@ -71,14 +71,14 @@
             android:id="@+id/spinnerGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/_8sdp"
             android:entries="@array/gender_options" />
 
         <Spinner
             android:id="@+id/spinnerClass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/_8sdp"
             android:entries="@array/class_options" />
     </LinearLayout>
 

@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -35,16 +36,16 @@
             android:name=".Pembayaran"
             android:exported="false" />
         <activity
-            android:name=".Hasil_Belajar"
+            android:name=".nilai.Hasil_Belajar"
             android:exported="false" />
         <activity
-            android:name=".DataGuru_danStaf"
+            android:name=".teacher_staff.DataGuru_danStaf"
             android:exported="false" />
         <activity
-            android:name=".Data_Siswa"
+            android:name=".siswa.Data_Siswa"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".dashboard.Dashboard"
             android:exported="false" />
         <activity
             android:name=".Account_Settings"

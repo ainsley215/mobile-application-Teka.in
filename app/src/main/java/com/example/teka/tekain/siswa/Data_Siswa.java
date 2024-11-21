@@ -1,7 +1,9 @@
-package com.example.teka.tekain;
+package com.example.teka.tekain.siswa;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SearchView;
@@ -13,12 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.teka.tekain.siswa.Siswa;
-import com.example.teka.tekain.siswa.SiswaAdapter;
+import com.example.teka.tekain.R;
 import com.example.teka.tekain.API.APIInterface;
-import com.example.teka.tekain.teacher_staff.RetrofitClient;
+import com.example.teka.tekain.Retrofit.RetrofitClient;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -78,7 +80,76 @@ public class Data_Siswa extends AppCompatActivity {
                 return false;
             }
         });
+
+        // Spinner Gender Filter
+        spinnerGender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedGender = parent.getItemAtPosition(position).toString();
+                if (!selectedGender.equals("All")) {
+                    filterByGender(selectedGender);
+                } else {
+                    siswaAdapter.updateList(siswaList); // Show all if "All" is selected
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
+
+        // Spinner Class Filter
+        spinnerClass.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedClass = parent.getItemAtPosition(position).toString();
+                if (!selectedClass.equals("All")) {
+                    filterByClass(selectedClass);
+                } else {
+                    siswaAdapter.updateList(siswaList); // Show all if "All" is selected
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
+
+        // Filter All Button
+        filterAll.setOnClickListener(v -> siswaAdapter.updateList(siswaList)); // Show all students
+
+        // Filter Newest Button
+        filterNewest.setOnClickListener(v -> {
+            List<Siswa> sortedList = new ArrayList<>(siswaList);
+            Collections.sort(sortedList, (s1, s2) -> s2.getTimestamp().compareTo(s1.getTimestamp()));
+            siswaAdapter.updateList(sortedList);
+        });
+
     }
+
+    private void filterByGender(String gender) {
+        List<Siswa> filteredList = new ArrayList<>();
+        for (Siswa siswa : siswaList) {
+            if (siswa.getGender().equalsIgnoreCase(gender)) {
+                filteredList.add(siswa);
+            }
+        }
+        siswaAdapter.updateList(filteredList);
+    }
+
+    private void filterByClass(String className) {
+        List<Siswa> filteredList = new ArrayList<>();
+        for (Siswa siswa : siswaList) {
+            if (siswa.getStudentClass().equalsIgnoreCase(className)) {
+                filteredList.add(siswa);
+            }
+        }
+        siswaAdapter.updateList(filteredList);
+    }
+
+
 
     private void fetchSiswaData(APIInterface apiService) {
         Call<List<Siswa>> call = apiService.getSiswa(); // Fetch list of students

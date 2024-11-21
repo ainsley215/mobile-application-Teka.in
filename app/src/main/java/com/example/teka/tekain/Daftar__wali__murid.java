@@ -147,7 +147,7 @@ public class Daftar__wali__murid extends AppCompatActivity {
         // Send data to PHP script via HTTP POST request
         new Thread(() -> {
             try {
-                String urlString = "http://localhost/Teka.in/register.php"; // Replace with your PHP URL
+                String urlString = "http://10.0.2.2/Teka.in/register.php"; // Replace with your PHP URL
                 URL url = new URL(urlString);
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
