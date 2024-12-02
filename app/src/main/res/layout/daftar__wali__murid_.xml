@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".Daftar__wali__murid">
+    tools:context=".daftar.Daftar__wali__murid">
 
     <ScrollView
         android:id="@+id/login_"
@@ -41,7 +41,7 @@
 
 
             <EditText
-                android:id="@+id/masukan_nama"
+                android:id="@+id/nama_siswa"
                 android:layout_width="@dimen/_230sdp"
                 android:layout_height="@dimen/_48sdp"
                 android:layout_alignStart="@+id/rectangle_344"
@@ -137,7 +137,7 @@
                 android:elevation="@dimen/_5sdp" />
 
             <TextView
-                android:id="@+id/alamat"
+                android:id="@+id/Nisn"
                 android:layout_width="@dimen/_165sdp"
                 android:layout_height="@dimen/_17sdp"
                 android:layout_alignParentStart="true"
@@ -145,7 +145,7 @@
                 android:layout_marginStart="@dimen/_63sdp"
                 android:layout_marginTop="@dimen/_303sdp"
                 android:layout_marginEnd="@dimen/_180sdp"
-                android:text="@string/alamat_string"
+                android:text="NISN"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_14sdp" />
 
@@ -189,7 +189,7 @@
                 android:elevation="@dimen/_5sdp" />
 
             <TextView
-                android:id="@+id/password"
+                android:id="@+id/Password"
                 android:layout_width="@dimen/_165sdp"
                 android:layout_height="@dimen/_17sdp"
                 android:layout_alignParentStart="true"
@@ -203,7 +203,7 @@
                 android:textSize="@dimen/_14sdp" />
 
             <EditText
-                android:id="@+id/masukan_alamat"
+                android:id="@+id/nis"
                 android:layout_width="@dimen/_230sdp"
                 android:layout_height="@dimen/_48sdp"
                 android:layout_alignStart="@+id/rectangle_345"
@@ -214,13 +214,13 @@
                 android:layout_marginEnd="@dimen/_7sdp"
                 android:background="@null"
                 android:elevation="@dimen/_6sdp"
-                android:hint="@string/masukan_alamat_string"
-                android:inputType="text"
+                android:hint="Masukkan nisn"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_11sdp" />
 
             <EditText
-                android:id="@+id/masukan_alamat_email"
+                android:id="@+id/email"
                 android:layout_width="@dimen/_230sdp"
                 android:layout_height="@dimen/_48sdp"
                 android:layout_alignStart="@+id/rectangle_346"
@@ -237,7 +237,7 @@
                 android:textSize="@dimen/_11sdp" />
 
             <EditText
-                android:id="@+id/masukan_password"
+                android:id="@+id/password"
                 android:layout_width="@dimen/_230sdp"
                 android:layout_height="@dimen/_48sdp"
                 android:layout_alignStart="@+id/rectangle_347"
@@ -377,40 +377,6 @@
                     android:layout_marginEnd="@dimen/_0sdp"
                     android:maxLines="1"
                     android:text="@string/_apakah_anda_sudah_memiliki_akun__masuk_string"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_11sdp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/group_google"
-                android:layout_width="@dimen/_160sdp"
-                android:layout_height="@dimen/_28sdp"
-                android:layout_below="@+id/group_masuk"
-                android:layout_marginLeft="@dimen/_77sdp"
-                android:layout_marginTop="@dimen/_22sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/_7123025_logo_google_g_icon_1"
-                    android:layout_width="@dimen/_38sdp"
-                    android:layout_height="@dimen/_36sdp"
-                    android:layout_marginLeft="@dimen/_0sdp"
-                    android:layout_marginTop="@dimen/_0sdp"
-                    android:src="@drawable/_7123025_logo_google_g_icon_1" />
-
-                <TextView
-                    android:id="@+id/masuk_dengan_google"
-                    android:layout_width="@dimen/_130sdp"
-                    android:layout_height="@dimen/_15sdp"
-                    android:layout_marginLeft="@dimen/_30sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:autoSizeMaxTextSize="@dimen/_100sdp"
-                    android:autoSizeMinTextSize="@dimen/_12sdp"
-                    android:autoSizeTextType="uniform"
-                    android:text="@string/masuk_dengan_google_string"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_11sdp" />
             </RelativeLayout>
